@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPS Distribution | Pièces Automobiles d'Origine Allemande</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: #1f2833;
+            --accent-blue: #45f3ff;
+            --accent-blue-hover: #00c2cb;
+            --text-main: #ffffff;
+            --text-muted: #c5a880; /* Teinte rappelant subtilement le bronze/or pour le côté premium */
+            --text-body: #a9b7c6;
+            --border-color: #2c3540;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .cta-top {
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .cta-top:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 7rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            background: rgba(69, 243, 255, 0.1);
+            color: var(--accent-blue);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(69, 243, 255, 0.2);
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            display: block;
+            color: var(--text-muted);
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            max-width: 650px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .cta-main {
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-main:hover {
+            background-color: var(--accent-blue);
+            color: var(--bg-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(69, 243, 255, 0.2);
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 4rem;
+            letter-spacing: 0.5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: var(--text-body);
+            font-size: 1rem;
+        }
+
+        /* Contact & Info Section */
+        .info-section {
+            background-color: #11141a;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 6rem 2rem;
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+        }
+
+        .info-block h4 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 1.2rem;
+        }
+
+        .info-item i {
+            color: var(--accent-blue);
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        .info-item p, .info-item a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .info-item a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: var(--text-body);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h1 span { font-size: 2rem; }
+            .hero { padding: 4rem 1rem; }
+            .services { padding: 4rem 1rem; }
+            .grid { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SPS <span>DISTRIBUTION</span></div>
+        <a href="https://wa.me/33753349686" class="cta-top" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="badge">Origine Allemande Garantie</div>
+            <h1>SPS DISTRIBUTION<span>La performance et la rigueur allemande</span></h1>
+            <p>Votre partenaire de confiance pour l'achat de pièces détachées automobiles de haute qualité, d'outillage de précision et d'équipements complets pour garages.</p>
+            <a href="https://wa.me/33753349686" class="cta-main" target="_blank">
+                Demander un devis en € <i class="fas fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2 class="section-title">Nos Prestations</h2>
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Pièces Détachées</h3>
+                    <p>Large gamme de pièces mécaniques et électroniques toutes marques, avec une spécialisation sur l'origine allemande pour assurer la longévité de vos véhicules.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Outillage Professionnel</h3>
+                    <p>Des outils robustes, ergonomiques et de haute précision conçus pour répondre aux exigences quotidiennes des mécaniciens et passionnés exigeants.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Équipements de Garage</h3>
+                    <p>Fourniture et installation de matériels professionnels pour aménager efficacement votre espace de travail ou votre atelier de réparation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="info-section">
+            <div class="info-container">
+                <div class="info-block">
+                    <h4>SPS Distribution</h4>
+                    <p style="color: var(--text-body);">Spécialiste de la distribution automobile à Bastia. Nous mettons notre expertise au service de votre performance mécanique.</p>
+                </div>
+                <div class="info-block">
+                    <h4>Localisation</h4>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rue François Lota<br>20600 Bastia, France</p>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <h4>Contact & Commandes</h4>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/33753349686" target="_blank">+33 7 53 34 96 86</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:spsdistributionbastia@gmail.com">spsdistributionbastia@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SPS Distribution. Magasin de pièces détachées automobiles. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
