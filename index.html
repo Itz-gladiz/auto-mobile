@@ -2,87 +2,253 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SPS Distribution</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPS Distribution - Pièces Automobiles</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f2f7ff;
+}
+
+header{
+    background:linear-gradient(90deg,#003b8e,#0d6efd);
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,59,142,.8),rgba(0,59,142,.8)),
+    url('images/banner.jpg');
+    background-size:cover;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-top:15px;
+}
+
+.btn{
+    background:white;
+    color:#003b8e;
+    padding:15px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    margin-top:20px;
+}
+
+.section{
+    padding:60px 5%;
+}
+
+.section h2{
+    text-align:center;
+    color:#003b8e;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.price{
+    color:#0d6efd;
+    font-size:24px;
+    font-weight:bold;
+}
+
+footer{
+    background:#003b8e;
+    color:white;
+    padding:40px;
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-<div class="logo">SPS Distribution</div>
-<ul>
-<li>Accueil</li>
-<li>Services</li>
-<li>Catalogue</li>
-<li>À propos</li>
-<li>Contact</li>
-</ul>
-</nav>
+<header>
+    <div class="logo">SPS Distribution</div>
 
-<header class="hero">
-<div class="overlay">
-<h1>Pièces Automobiles & Équipements Professionnels</h1>
-<p>Des solutions complètes pour garages, ateliers et particuliers.</p>
-<a href="https://wa.me/33753349686" class="btn">Commander sur WhatsApp</a>
-</div>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Pièces</a>
+        <a href="#">Marques</a>
+        <a href="#">Garage</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
-<section>
-<h2>Nos catégories</h2>
-<div class="grid">
+<section class="hero">
+    <h1>SPÉCIALISTE DE LA PIÈCE AUTOMOBILE</h1>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900">
-<h3>Moteurs</h3>
-</div>
+    <p>
+        Vente de pièces automobiles,
+        équipements de garage et outillage.
+    </p>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=900">
-<h3>Freinage</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900">
-<h3>Pièces Auto</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581092918484-8313b4c4e2d3?w=900">
-<h3>Outillage</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1613214150384-a24eb8f9cfc6?w=900">
-<h3>Garage</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900">
-<h3>Accessoires</h3>
-</div>
-
-</div>
+    <a class="btn"
+       href="https://wa.me/33753349686">
+       Commander sur WhatsApp
+    </a>
 </section>
 
-<section class="features">
-<h2>Pourquoi nous choisir ?</h2>
-<div class="grid">
-<div class="small">Livraison rapide</div>
-<div class="small">Produits professionnels</div>
-<div class="small">Support client</div>
-<div class="small">Paiement sécurisé</div>
-</div>
+<section class="section">
+
+    <h2>Nos marques automobiles</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="images/bmw.jpeg">
+            <div class="card-body">
+                <h3>BMW</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/mercedes.jpeg">
+            <div class="card-body">
+                <h3>Mercedes-Benz</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/audi.jpeg">
+            <div class="card-body">
+                <h3>Audi</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/toyota.jpeg">
+            <div class="card-body">
+                <h3>Toyota</h3>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="contact">
-<h2>Contact</h2>
-<p>📱 +33 7 53 34 96 86</p>
-<p>📧 spsdistributionbastia@gmail.com</p>
-<p>📍 Rue François Lota, 20600 Bastia, France</p>
-<p>💶 Monnaie : €</p>
+<section class="section">
+
+    <h2>Nos pièces automobiles</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="images/frein.jpeg">
+
+            <div class="card-body">
+                <h3>Kit freinage</h3>
+                <p>Disques + plaquettes premium</p>
+                <div class="price">89 €</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/batterie.jpeg">
+
+            <div class="card-body">
+                <h3>Batterie</h3>
+                <p>12V haute performance</p>
+                <div class="price">119 €</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/turbo.jpeg">
+
+            <div class="card-body">
+                <h3>Turbo</h3>
+                <p>Pièces d'origine</p>
+                <div class="price">399 €</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/amortisseur.jpeg">
+
+            <div class="card-body">
+                <h3>Amortisseurs</h3>
+                <p>Avant / arrière</p>
+                <div class="price">95 €</div>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<a class="whatsapp" href="https://wa.me/33753349686">WhatsApp</a>
+<footer>
+
+    <h2>SPS Distribution</h2>
+
+    <p>
+        📍 Rue François Lota,
+        20600 Bastia, France
+    </p>
+
+    <p>
+        📱 WhatsApp :
+        +33 7 53 34 96 86
+    </p>
+
+    <p>
+        ✉️ spsdistributionbastia@gmail.com
+    </p>
+
+</footer>
 
 </body>
 </html>
